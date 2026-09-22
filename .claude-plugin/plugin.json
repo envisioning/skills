@@ -1,0 +1,9 @@
+{
+  "name": "envisioning",
+  "version": "0.1.0",
+  "description": "Foresight methods as skills: sense signals, project futures, stress-test plans, make deliverables. Works standalone; grounds and persists through the Envisioning MCP when connected.",
+  "author": { "name": "Envisioning", "url": "https://envisioning.com" },
+  "homepage": "https://github.com/envisioning/skills",
+  "license": "MIT",
+  "keywords": ["foresight", "futures", "signals", "scenarios", "strategy"]
+}
