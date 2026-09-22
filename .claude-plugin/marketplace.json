@@ -1,0 +1,12 @@
+{
+  "name": "envisioning",
+  "owner": { "name": "Envisioning", "url": "https://envisioning.com" },
+  "plugins": [
+    {
+      "name": "envisioning",
+      "source": "./",
+      "description": "Foresight methods as skills: scope, scan, ground, structure, project, stress-test, report.",
+      "version": "0.1.0"
+    }
+  ]
+}
