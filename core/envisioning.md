@@ -38,6 +38,14 @@ The output is one markdown file with the frontmatter in
 | scenario set | `folder_path: /foresight/scenarios`, `category: research` | `./foresight/scenarios/<slug>.md` |
 | grill report | `folder_path: /foresight/grills`, `category: brief` | `./foresight/grills/<slug>.md` |
 | artifact | `folder_path: /foresight/artifacts`, `category: brief` | `./foresight/artifacts/<slug>.md` |
+| briefing (`scope`) | `folder_path: /foresight/briefings`, `category: brief` | `./foresight/briefings/<slug>.md` |
+| scan index | `folder_path: /foresight/scans`, `category: research` | `./foresight/scans/<slug>.md` |
+| frame set | `folder_path: /foresight/frames`, `category: research` | `./foresight/frames/<slug>.md` |
+| report | `folder_path: /foresight/reports`, `category: report` | `./foresight/reports/<slug>.md` |
+
+Scan cards are ordinary signal cards in `/foresight/signals`; the scan index
+lists them. `ground` and `merge` update cards in place — always `open` first
+and pass `if_content_hash`.
 
 Rules for `docs_write`:
 

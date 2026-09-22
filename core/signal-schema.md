@@ -16,8 +16,16 @@ direction: <emerging | accelerating | plateauing | fading>
 confidence: <low | medium | high>          # in the observation, not the future
 horizon: <1 | 3 | 10>                       # years until it matters broadly
 actors: [<who is moving>]
-sources: [<url | document:<id> | ./path>]
+sources:                                    # see grounding.md for verdicts
+  - { url: <url | document:<id> | ./path>, verdict: <supports|contradicts|unrelated|unreachable> }
+grounding: { state: <ungrounded|pending|verified|rejected>, confidence:, rationale:, manual: false }
 subject: <core:kind:id, optional>
+# present only when the card came out of a scan:
+playbook: <playbook slug>
+scan: <scan index slug>
+category: <the playbook category, exactly one>
+metrics: { <metric-key>: <1..n>, … }        # scale from the playbook
+merged_into: <slug, only on a frozen duplicate>
 ---
 
 ## What
@@ -42,3 +50,7 @@ Two or three concrete tells that would raise or lower `confidence` or move
 - `confidence` is about the observation (did this happen, is the source
   solid). Future likelihood belongs to `scenarios`, not here.
 - `horizon` is a guess; say so in `Watch for` if the guess is soft.
+- `confidence` at the top level is the observer's quick read; `grounding.confidence`
+  is the result of actually checking sources. They may disagree until `ground` runs.
+- A merged duplicate keeps every field and gains `merged_into`. It is frozen, not
+  deleted; skills that list active cards skip it.
