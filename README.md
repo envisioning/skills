@@ -37,6 +37,12 @@ Every card carries a grounding state and per-source verdicts
 ([`core/grounding.md`](core/grounding.md)) — a signal is never asserted
 without saying what was read and what it said.
 
+## See it first
+
+[`examples/europes-space-economy/`](examples/europes-space-economy) is a real
+end-to-end run — briefing, scan index, three grounded signal cards, four
+tensions, and the readout — with the coverage gaps it actually had.
+
 ## Install
 
 ```bash
